@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #121212;
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* Header Styles */
+.header {
+  background-color: #1a1a1a;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header h1 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.header button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 18px;
+}
+
+/* Card Styles */
+.card {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Button Styles */
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.button-contained {
+  background-color: #bb86fc;
+  color: white;
+}
+
+.button-contained:hover {
+  background-color: #9d6dd9;
+}
+
+.button-contained:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+.button-outlined {
+  background-color: transparent;
+  border: 1px solid #bb86fc;
+  color: #bb86fc;
+}
+
+.button-outlined:hover {
+  background-color: rgba(187, 134, 252, 0.1);
+}
+
+.button-text {
+  background: none;
+  border: none;
+  color: #bb86fc;
+  cursor: pointer;
+  padding: 8px 16px;
+}
+
+.button-text:hover {
+  background-color: rgba(187, 134, 252, 0.1);
+}
+
+.button-danger {
+  color: #f44336;
+}
+
+.button-danger:hover {
+  background-color: rgba(244, 67, 54, 0.1);
+}
+
+/* Input Styles */
+.input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 4px;
+  color: #e0e0e0;
+  font-size: 16px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #bb86fc;
+}
+
+.input::placeholder {
+  color: #888;
+}
+
+.textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 4px;
+  color: #e0e0e0;
+  font-size: 16px;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: #bb86fc;
+}
+
+/* Container Styles */
+.container {
+  min-height: 100vh;
+  background-color: #121212;
+  padding-bottom: 80px;
+}
+
+.scroll-container {
+  max-height: calc(100vh - 60px);
+  overflow-y: auto;
+}
+
+/* FAB (Floating Action Button) */
+.fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #bb86fc;
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fab:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Empty State */
+.empty-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 32px;
+  text-align: center;
+}
+
+.empty-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #e0e0e0;
+  margin-bottom: 8px;
+}
+
+.empty-subtext {
+  font-size: 14px;
+  color: #b0b0b0;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.gap-8 {
+  gap: 8px;
+}
+
+.gap-16 {
+  gap: 16px;
+}
+
+/* Loading Spinner */
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
